@@ -27,7 +27,7 @@ jobs:
             PYTHON_VERSION: "3.14"
         steps:
             - name: checkout-repository
-              uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+              uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
               with:
                   fetch-depth: 0
 
@@ -35,7 +35,7 @@ jobs:
               run: echo "${{ env.PYTHON_VERSION }}" > .python-version
 
             - name: setup-mise
-              uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+              uses: jdx/mise-action@c2a87611a18de5b3828c5652fe268e992400cb5c # v4.3.0
 
             - name: verify-rust-toolchain
               # Workaround for Windows rustup bug: https://github.com/rust-lang/rustup/issues/3104
@@ -105,6 +105,6 @@ jobs:
 
             - name: sonarqube-scan
               if: matrix.os == 'ubuntu-latest'
-              uses: SonarSource/sonarqube-scan-action@713881670b6b3676cda39549040e2d88c70d582e # v8.2.0
+              uses: SonarSource/sonarqube-scan-action@22918119ff8e1ca75a623e15c8296b6ea4fbe28f # v8.2.1
               env:
                   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
