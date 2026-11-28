@@ -9,7 +9,7 @@ permissions:
 
 jobs:
     shared-pr-unlock:
-        uses: wislertt/zerv/.github/workflows/shared-pr-unlock.yml@677008dc5da55e6a4d0bfb0c538340aa037d98ef # v0.8.38
+        uses: wislertt/zerv/.github/workflows/shared-pr-unlock.yml@036c1339c52b67601fa9c6ddc1b2086eda01e150 # v0.8.46
         with:
             environments: '["d", "n", "p"]'
             deploy_label_prefix: "deploy-"
